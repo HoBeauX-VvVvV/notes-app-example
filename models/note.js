@@ -4,7 +4,9 @@ const noteSchema = new mongoose.Schema({
       text: { type: String, required: true },
       isRead: { type: Boolean, required: true }
 },{
-    timeStamps: true    
+    timestamps: true    
 });
 
-const note = mongoose.model('Note', noteSchema)
+const Note = mongoose.model('Note', noteSchema)
+
+module.exports = Note
