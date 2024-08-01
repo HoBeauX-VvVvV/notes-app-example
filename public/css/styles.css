@@ -1,0 +1,7 @@
+body {
+    background-color: #fdfcf1;
+    color: darkgreen;
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}

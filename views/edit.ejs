@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/assets/css/styles.css"/>
+  <title>Edit a Note with id:<%= note._id %></title>
+</head>
+<body>
+  <h1>Edit Note <%= note._id %>!</h1>
+  <form action="/notes/<%= note._id %>?_method=PUT" method="POST">
+    <label for="text">Note Text:</label>
+    <input type="text" name="text" id="text" value="<%= note.text %>" />
+    <label for="isRead">Has it been read?</label>
+    <input type="checkbox" name="isRead" id="isRead" 
+    <% if(note.isRead){ %>
+        checked
+     <% } %> />
+    <button type="submit">Edit Note</button>
+  </form>
+  <a href="/notes/<%= note._id %>">Back to Note <%= note._id %></a>
+</body>
+</html>
